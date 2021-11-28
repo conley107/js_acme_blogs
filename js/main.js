@@ -221,12 +221,14 @@ async function selectMenuChangeEventHandler(event){
 
 async function initPage() {
     const users = await getUsers();
+    // console.log(`20. WORKING`)
     const select = populateSelectMenu(users);
     return [users, select];
 }
 
 async function initApp() {
     initPage();
+    // console.log(`21. WORKING`)
     const select = document.getElementById("selectMenu");
     select.addEventListener("change",selectMenuChangeEventHandler);
 }
